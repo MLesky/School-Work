@@ -9,5 +9,23 @@ Write a function which creates a list of all possible user ids. Assume the lette
   
  ### Code
  The function uses 4 level nested loops, where each loop generates one of the 4 characters for the ids. The generated ids are concatenated to a string which the function returns
+ 
+ [See code here](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/ids.cpp)
+ 
+ [Other code (not working fully)](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/ids_with_recursion.cpp)
  ### Screenshot
  ![Generated IDs](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/generated%20ids.png)
+ 
+ ------
+ ## 2. TRIANGLES
+ Write a program to create the following triangles using loops
+ * A pyramidal triangle
+ * A right angle triangle
+ * The left helf of a diamond
+ 
+ ### Code
+ The code contains 3 functions, with each for creating the triangles
+ 
+ [See code here](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C++/Assignments/triangles.cpp)
+ ### Screenshots
+ ![Triangles](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/triangles.png)
