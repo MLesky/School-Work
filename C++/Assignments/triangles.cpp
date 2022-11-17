@@ -74,8 +74,12 @@ void halfDiamond(int radius){
 }
 
 int main(){
-    int height = 9;
-
+    int height;
+    
+    do {
+        cout << "Enter height ( > 0): ";
+        cin >> height;
+    } while(height < 1);
     
     pyramid(height);
     rightAngle(height);
