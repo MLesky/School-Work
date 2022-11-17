@@ -11,3 +11,15 @@ Write a function which creates a list of all possible user ids. Assume the lette
  The function uses 4 level nested loops, where each loop generates one of the 4 characters for the ids. The generated ids are concatenated to a string which the function returns
  ### Screenshot
  ![Generated IDs](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/generated%20ids.png)
+ 
+ ------
+ ## 2. TRIANGLES
+ Write a program to create the following triangles using loops
+ * A pyramidal triangle
+ * A right angle triangle
+ * The left helf of a diamond
+ 
+ ### Code
+ The code contains 3 functions, with each for creating the triangles
+ ### Screenshots
+ ![Triangles](https://github.com/MLesky/School-Work/blob/Year-2-First-Semester/C%2B%2B/Assignments/triangles.png)
