@@ -34,7 +34,7 @@ bool playGuessingGame(int lowest_number, int highest_number, int chances){
 
 int main(){
 	int i = 0;
-	bool hasWon = playGuessingGame(6, 7, 1);
+	bool hasWon = playGuessingGame(1, 100, 8);
 	// similar to if...else
 	hasWon ? cout << "You Have Won The Game" : cout << "You Have Lossed The Game";
 	return 0;
