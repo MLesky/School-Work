@@ -1,66 +1,13 @@
-#include <iostream>
-#include <fstream>
+#include "headers/student.h"
+#include "headers/course.h"
+#include "headers/option.h"
 
 using namespace std;
 
-enum Gender {Male, Female, Other};
-
-class Course {
-    public:
-    string code;
-    string title;
-    int creditValue;
-
-    private:
-    char grade;
-};
-
-class Student {
-    public:
-    string firstName;
-    string secondName;
-    string fullName;
-    string matricule;
-    Gender gender;
-    Course courses[20];
-
-    Student(string fname, string sname, string mat, Gender gen, string pass){
-        firstName = fname;
-        secondName = sname;
-        matricule = mat;
-        gender =  gen;
-        fullName = fname + " " + sname;
-        setPassword(pass);
-
-        // writing data to file
-        ofstream studentsInfo;
-        studentsInfo.open("data/students_info.csv", ios::app);
-
-        if(!studentsInfo.is_open()){
-            cout << "Error adding student\n";
-            exit(1);
-        }
-
-        studentsInfo << fullName << "," << matricule << "," << gender << "," << password << endl;
-        studentsInfo.close();
-    }
-
-    void setPassword(string pass){
-        password = pass;
-    };
-
-    string getPassword(string pass){
-        return password;
-    }
-
-    private:
-    string password;
-    float GPA;
-
-};
-
-int main()
-{
-    Student first("Mbah", "Lesky", "UBa21PB015", Male, "12345");
+int main(){
+    Student first("Mbah", "Lesky", "UBa21PB015", Male, "SWE", "12345");
+  //  Course test("cen2101", "Chemistry", 6);
+  //  Option ghs("SWE", "Software", "COLTECH");
+    first.registerDepartmentalCourses();
     return 0;
 }
