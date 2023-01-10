@@ -5,9 +5,8 @@
 using namespace std;
 
 int main(){
-    Student first("Mbah", "Lesky", "UBa21PB015", Male, "SWE", "12345");
-  //  Course test("cen2101", "Chemistry", 6);
-  //  Option ghs("SWE", "Software", "COLTECH");
-    first.registerDepartmentalCourses();
+  Student stud("John", "Doe", "UBa20pb789", Male, "SWE");
+  stud.registerDepartmentalCourses();
+  stud.recordMarks();
     return 0;
 }

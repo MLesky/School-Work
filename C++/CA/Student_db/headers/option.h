@@ -86,12 +86,11 @@ class Option {
             exit(1);
         }
         for (k = 0; k < j-1; k++){
-            optionData << course[choices[k]-1] << endl;
+            optionData << course[choices[k]] << endl;
         }
 
         cout << "added courses";
         optionData.close();
-
     }
 
 };
