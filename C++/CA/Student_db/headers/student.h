@@ -45,7 +45,7 @@ class Student {
         studentsInfo << firstName << "," << secondName << "," << matricule << "," << genderPrint(gender) << option << endl;
         studentsInfo.close();
 
-        cout << fullName << " Successfully Added\n";
+     //   cout << fullName << " Successfully Added\n";
     }
 
     void registerDepartmentalCourses(){
@@ -72,7 +72,7 @@ class Student {
             studentCourses << course[j] << endl;
         }
 
-        cout << "registered courses\n";
+   //     cout << "registered courses\n";
         studentCourses.close();
         optionCourses.close();
 
@@ -87,7 +87,6 @@ class Student {
             cout << "Error recording marks";
             exit(1);
         }
-
         string course;
         int cv, totalCredit = 0;
         float twa = 0, caMark = 0, examMark = 0, examtemp, catemp, totalMark, twp = 0;
@@ -101,17 +100,14 @@ class Student {
                     break;
                 }
             }
-
             for (; i < course.length(); i++){
                 cout << course[i];
                 if(course[i] == ',') break;
             }
-
             cout << "\nCA Marks: ";
             cin >> catemp;
             cout << "Exam Mark: ";
             cin >> examtemp;
-
             cv = (int)course[course.length() - 1];
             examMark += examtemp;
             caMark += catemp;
@@ -126,7 +122,6 @@ class Student {
         }
             setGPA(twa/totalCredit);
             studentMarks << endl << "GPA: " << getGPA() << endl;
-
         cout << "Marks uploaded" << endl;
     }
 

@@ -5,8 +5,8 @@
 using namespace std;
 
 int main(){
-  Student stud("John", "Doe", "UBa20pb789", Male, "SWE");
-  stud.registerDepartmentalCourses();
-  stud.recordMarks();
+  Student newStud("Mbah", "Lesky", "UBa21PB015", Male, "SWE");
+  newStud.registerDepartmentalCourses();
+  newStud.recordMarks();
     return 0;
 }

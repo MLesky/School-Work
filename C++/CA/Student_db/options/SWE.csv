@@ -1,7 +1,6 @@
-Name: Software(SWE)
-School: COLTECH
+Name: Software_Engineering(SWE)
+School: Coltech
 
-cen2101,Biology,6
-cen2101,Chemistry,6
-cen2101,Chemistry,6
-56677,physics,8
+cen1,algorithm,3
+cen3,python,2
+cen5,networks,4
