@@ -42,7 +42,7 @@ class Student {
             exit(1);
         }
 
-        studentsInfo << firstName << "," << secondName << "," << matricule << "," << genderPrint(gender) << option << "," << endl;
+        studentsInfo << firstName << "," << secondName << "," << matricule << "," << genderPrint(gender) << option << endl;
         studentsInfo.close();
 
         cout << fullName << " Successfully Added\n";
@@ -89,15 +89,15 @@ class Student {
         }
 
         string course;
-        int cv;
-        float caMark = 0, examMark = 0, examtemp, catemp, totalMark;
+        int cv, totalCredit = 0;
+        float twa = 0, caMark = 0, examMark = 0, examtemp, catemp, totalMark, twp = 0;
         while(getline(studentCourses, course)){
 
             cout << "Enter marks for ";
             int i;
             for (i = 0; i < course.length() - 1; i++){
-                if(course[i] == ','){ 
-                    i++; 
+                if(course[i] == ','){
+                    i++;
                     break;
                 }
             }
@@ -112,13 +112,30 @@ class Student {
             cout << "Exam Mark: ";
             cin >> examtemp;
 
+            cv = (int)course[course.length() - 1];
             examMark += examtemp;
             caMark += catemp;
-            cv = (int)course[course.length() - 1];
-
+            totalMark = caMark + examMark;
+            float course_gp = totalMark/4;
+            float course_wp = course_gp * cv;
+            twa += course_wp;
+            totalMark = examMark + caMark;
+            totalMark/25;
+            totalCredit += cv;
             studentMarks << course << "," << catemp << "," << examtemp << endl;
-            cout << "Marks uploaded" << endl;
         }
+            setGPA(twa/totalCredit);
+            studentMarks << endl << "GPA: " << getGPA() << endl;
+
+        cout << "Marks uploaded" << endl;
+    }
+
+    void setGPA(float value){
+        GPA = value;
+    }
+
+    float getGPA(){
+        return GPA;
     }
 
     private:
