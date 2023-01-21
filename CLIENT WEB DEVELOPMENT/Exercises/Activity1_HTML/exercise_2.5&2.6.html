@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend for=""> Customer Info </legend>
+                <table>
+                    <tr>
+                        <td><label for="">Name:</label></td>
+                        <td><input type="text" name="customer_name" id="" placeholder="Name..."></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="sname">SecondName:</label></td>
+                        <td><input type="text" name="secondName" id="sname" placeholder="Second name..."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Plonenumber:</label></td>
+                        <td><input type="text" name="customer_tel" id="" placeholder="Tel..."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Email:</label></td>
+                        <td><input type="text" name="customer_email" id="" placeholder="Email..."></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Gender:</label></td>
+                        <td>
+                            <input type="radio" name="gender" id="male"> <label for="male">Male</label>
+                            <input type="radio" name="gender" id="female"> <label for="female">Female</label>
+                            <input type="radio" name="gender" id="other"> <label for="other">Other</label>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <td><label for="">Speciality:</label></td>
+                        <td><select name="speciality" id="">
+                            <option value="none" selected>None</option>
+                            <option value="swe">Software Engineering</option>
+                            <option value="cnsm">Computer Networking</option>
+                        </select></td>
+                    </tr>
+                </table>
+                <div class="btn-group">
+                    <input type="submit" value="validate">
+                    <input type="reset" value="reset">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

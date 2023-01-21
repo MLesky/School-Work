@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 4.7</title>
+    <style>
+        :root {
+    --primary: rgb(0, 110, 18);
+}
+
+body {
+    max-width: 800px;
+    display: block;
+    margin: auto;
+}
+
+nav {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(183, 255, 195);
+}
+
+.links {
+    display: flex;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 38px;
+    z-index: 1;
+}
+
+a, button {
+    padding: 12px 20px;
+    background-color: transparent;
+    color: var(--primary);
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+button {
+    width: 120px;
+}
+
+a:hover, button:hover {
+    background-color: var(--primary);
+    color: white;
+} 
+
+button:focus {
+    background-color: var(--primary);
+    color: white;
+}
+
+.dropdown-content>a {
+    width: 120px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid var(--primary);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="links">
+            <a href="">Dashboard</a>
+            <a href="linked_page copy.html">About Us</a>
+            <a href="linked_page copy.html">Contact us</a>
+        </div>
+        <div class="dropdown">
+            <button class="dropdown-btn">More...</button>
+            <div class="dropdown-content">
+                <a href="linked_page copy.html">Profile</a>
+                <a href="linked_page copy.html">Courses</a>
+                <a href="linked_page copy.html">Settings</a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

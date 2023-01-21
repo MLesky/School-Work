@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script>
+            var N, totalArea, totalPerimeter;
+            totalArea = totalPerimeter = 0;
+
+            // object for holing plot info
+            var plot = {
+                no: 0,
+                length: 0.0,
+                width: 0.0,
+                area: 0.0,
+                perimeter: 0.0
+            } 
+
+            var plots = new Array() // array for holding many plots info
+            
+            N = parseInt(prompt("Enter number of plots"))
+            
+            for (var i = 0; i < N; i++){
+                const plot = new Object()
+                plot.no = i+1;
+                plot.length = parseFloat(prompt("Enter length of plot #" + plot.no))
+                plot.width = parseFloat(prompt("Enter width of plot #" + plot.no))
+                plot.area = plot.length * plot.width
+                plot.perimeter = 2 * (plot.length + plot.width)
+                plots.push(plot)
+                // adding up the perimeters and areas
+                totalArea += plot.area
+                totalPerimeter += plot.perimeter
+            }
+    
+            // printing each field's data
+            plots.forEach(plot => {
+                document.write(
+                    "PLOT No " + plot.no + "<br>" +
+                    "length: " + plot.length + "<br>" +
+                    "Width: " + plot.width + "<br>" +
+                    "Area: " + plot.area + "<br>" +
+                    "Perimeter: " + plot.perimeter + "<hr><br>"
+                )
+            })
+
+            document.write("Total area of all fields is "  + totalArea + "<br>" +
+            "total Perimeter for all fields is " + totalPerimeter)
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
