@@ -138,7 +138,7 @@ class Student {
 
 };
 
-void addStudent(){
+Student addStudent(){
     string fname, sname, matricule, option;
     int optionChoice, genderChoice;
     Gender gender;
@@ -206,6 +206,6 @@ void addStudent(){
     } while(genderChoice > 3);
 
     Student newStudent(fname, sname, matricule, gender, option);
-
+    return newStudent;
 }
 #endif
