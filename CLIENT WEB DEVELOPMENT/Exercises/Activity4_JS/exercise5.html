@@ -1,0 +1,33 @@
+<html>
+    <head> 
+        <script>
+            var allCircles = new Array();
+        
+            for (var i = 0; i < 10; i++){
+               const circle = new Object()
+               circle.no = i+1
+               circle.radius = parseFloat(prompt("Enter radius of circle No " + circle.no));
+               circle.area = Math.PI *  Math.pow(circle.radius, 2)
+               allCircles.push(circle)
+           }
+
+           allCircles.forEach(circle => {
+               document.write(circle.no + numSuffix(circle.no) + " Circle: <br>Radius" + circle.radius + 
+               "<br>Area: " + circle.area + "<hr>")
+           })
+
+           function numSuffix(number){
+               var string = number.toString()
+               switch(string[string.length - 1]){
+                   case '1' : return 'st';
+                   case '2' : return 'nd';
+                   case '3' : return 'rd';
+                   default : return 'th';
+               }
+           }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

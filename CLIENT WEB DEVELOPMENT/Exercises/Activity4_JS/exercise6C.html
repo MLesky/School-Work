@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <style>
+            input, input:focus {
+                width: 50px;
+                padding: 5px;
+                text-align: right;
+                border: 1px solid grey;
+                outline: none;
+            }
+            input::placeholder {
+                font-size: 1.1em;
+            }
+            button{
+                margin: 20px 0;
+            }
+        </style>
+        <script>
+            function calculate(){
+                var a, b, c, d, e, f, x, y
+                a = parseFloat(document.getElementById('a').value)
+                b = parseFloat(document.getElementById('b').value)
+                c = parseFloat(document.getElementById('c').value)
+                d = parseFloat(document.getElementById('d').value)
+                e = parseFloat(document.getElementById('e').value)
+                f = parseFloat(document.getElementById('f').value)
+
+                if(isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) || isNaN(e) || isNaN(f)) {
+                    alert("Please enter a number for a, b, c, d, e and f")
+                    return;
+                }
+
+                document.getElementById('equations').innerHTML = 
+                "<b>Solving: </b><br>" +
+                a + "x" + (b >= 0 ? " + " : " - ") + Math.abs(b) + "y = " + c + "<br>" +
+                d + "x" + (e >= 0 ? " + " : " - ") + Math.abs(e) + "y = " + f
+
+                b *= d
+                c *= d
+                e *= a
+                f *= a
+                y = (c - f) / (b - e)
+                x = (c - (b * y)) / (a * d)
+                
+                document.getElementById("answers").innerHTML = 
+                "Solution<br>x = " + x + "<br>y = " + y
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <p>Enter the value of A and B</p>
+            <fieldset>
+                <legend>Equation 1</legend>
+                <input type="text" id="a" placeholder="a" value="3">
+                <label for="A">x</label>
+                +
+                <input type="text" id="b" placeholder="b" value="5">
+                <label for="B">y</label>
+                = 
+                <input type="text" id="c" placeholder="c" value="9">
+            </fieldset>
+
+            <fieldset>
+                <legend>Equation 2</legend>
+                <input type="text" id="d" placeholder="d" value="4">
+                <label for="A">x</label>
+                +
+                <input type="text" id="e" placeholder="e" value="-7">
+                <label for="B">y</label>
+                = 
+                <input type="text" id="f" placeholder="f" value="2">
+            </fieldset>
+            <br>
+            <button type="button" onclick="calculate()">Calculate</button>
+            
+            <p id="equations"></p>
+            <p id="error"></p>
+            <p id="answers"></p>
+        </form>
+    </body>
+</html>

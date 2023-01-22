@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                var A, B, C, det, x1, x2;
+                // getting A and B value from input fields and converting them to floats
+                A = parseFloat(document.getElementById('A').value)
+                B = parseFloat(document.getElementById('B').value)
+                C = parseFloat(document.getElementById('C').value)
+                // checks is the A and B are numbers or not
+                // is not a number (isNaN)
+                if (isNaN(A) || isNaN(B) || isNaN(C)){
+                    alert("Please enter a number for A, B and C")
+                    return
+                }
+                document.querySelector("#equation").innerHTML = "Solving " + A + "X<sup>2</sup> " + (B >= 0 ? " + " : " - ") + Math.abs(B) + "X " + (C >= 0 ? " + " : " - ") + Math.abs(C) + " = 0"
+                /* HOW TO SOLVE
+                    det = b^2 - 4ac
+                    x1  = -b + sqrt(det)/2a
+                    x1  = -b - sqrt(det)/2a
+                */
+                errorElement = document.getElementById('error')
+                if (A == 0){
+                    errorElement.innerHTML = "Not a quadratic Equation<br>"
+                    errorElement.style.color = 'red'
+                    return
+                }
+                det = (B * B) - (4 * A * C);
+                if(det < 0){
+                    errorElement.innerHTML = "Equation has complex roots"
+                    errorElement.style.color = 'green'
+                    var res = (Math.sqrt(det  * -1) / (2 * A)).toFixed(2) 
+                    x1 = (-B / (2 * A)).toFixed(2) + " + " + Math.abs(res) + "i";
+                    x2 = (-B / (2 * A)).toFixed(2) + " - " + res + "i";
+                }
+                else {
+                    x1 = (-B + Math.sqrt(det)) / (2 * A)
+                    x2 = (-B - Math.sqrt(det)) / (2 * A)
+                }
+                document.querySelector('#valuesofX').innerHTML = "X = " + x1 + " and X = " + x2;
+            }
+        </script>
+        <style>
+            input, input:focus {
+                width: 50px;
+                padding: 5px;
+                text-align: right;
+                border: 1px solid grey;
+                outline: none;
+            }
+            input::placeholder {
+                font-size: 1.1em;
+            }
+            button{
+                margin: 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <p>Enter the value of A and B</p>
+            <input type="text" name="A" id="A" placeholder="A">
+            <label for="A">X<sup>2</sup></label>
+            +
+            <input type="text" name="B" id="B" placeholder="B">
+            <label for="B">X</label>
+            +
+            <input type="text" name="C" id="C" placeholder="C">
+            = 0
+            <br>
+            <button type="button" onclick="calculate()">Calculate</button>
+            
+            <p id="equation"></p>
+            <p id="error"></p>
+            <p id="valuesofX"></p>
+        </form>
+    </body>
+</html>
