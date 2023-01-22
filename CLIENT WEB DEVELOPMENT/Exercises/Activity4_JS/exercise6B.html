@@ -7,16 +7,13 @@
                 A = parseFloat(document.getElementById('A').value)
                 B = parseFloat(document.getElementById('B').value)
                 C = parseFloat(document.getElementById('C').value)
-            
                 // checks is the A and B are numbers or not
                 // is not a number (isNaN)
                 if (isNaN(A) || isNaN(B) || isNaN(C)){
                     alert("Please enter a number for A, B and C")
                     return
                 }
-
                 document.querySelector("#equation").innerHTML = "Solving " + A + "X<sup>2</sup> " + (B >= 0 ? " + " : " - ") + Math.abs(B) + "X " + (C >= 0 ? " + " : " - ") + Math.abs(C) + " = 0"
-                
                 /* HOW TO SOLVE
                     det = b^2 - 4ac
                     x1  = -b + sqrt(det)/2a
@@ -28,7 +25,6 @@
                     errorElement.style.color = 'red'
                     return
                 }
-
                 det = (B * B) - (4 * A * C);
                 if(det < 0){
                     errorElement.innerHTML = "Equation has complex roots"
@@ -41,9 +37,7 @@
                     x1 = (-B + Math.sqrt(det)) / (2 * A)
                     x2 = (-B - Math.sqrt(det)) / (2 * A)
                 }
-                
                 document.querySelector('#valuesofX').innerHTML = "X = " + x1 + " and X = " + x2;
-                
             }
         </script>
         <style>

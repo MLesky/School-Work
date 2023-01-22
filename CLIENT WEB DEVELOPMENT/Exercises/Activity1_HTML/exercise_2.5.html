@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <style>
+        td:first-child {
+            text-align: right;
+        }
+        td {
+            padding: 5px 10px;
+        }
+        input[type='file'], button {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <h1>Registration Form</h1>
+            <p>please fill out the form below to register for out site. Fields with bold labels are required</p>
+                <table>
+                    <tr>
+                        <td><label for=""><b>Name</b></label></td>
+                        <td><input type="text" name="customer_name" id="" placeholder="Name..."></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for=""><b>Gender</b></label></td>
+                        <td>
+                            <input type="radio" name="gender" id="male"> <label for="male">male</label>
+                            <input type="radio" name="gender" id="female"> <label for="female">female</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for=""><b>Operating System</b></label></td>
+                        <td><select name="speciality" id="">
+                            <option value="windows" selected>windows</option>
+                            <option value="linux">linux</option>
+                            <option value="macos">macos</option>
+                        </select></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Toys</label></td>
+                        <td>
+                            <input type="checkbox" name="" id="">Digital Camera
+                            <input type="checkbox" name="" id="">MP3 Player
+                            <input type="checkbox" name="" id="">Wireless LAN
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Portrait</label></td>
+                        <td><input type="file" name="" id=""></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="">Mini Biography</label></td>
+                        <td>
+                            <textarea name="" id="" cols="35" rows="5"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><button type="submit">register</button></td>
+                    </tr>
+                </table>
+        </form>
+    </div>
+</body>
+</html>

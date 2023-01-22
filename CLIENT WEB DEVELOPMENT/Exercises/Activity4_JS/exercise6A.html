@@ -1,5 +1,20 @@
 <html>
     <head>
+        <style>
+            input, input:focus {
+                width: 50px;
+                padding: 5px;
+                text-align: right;
+                border: 1px solid grey;
+                outline: none;
+            }
+            input::placeholder {
+                font-size: 1.1em;
+            }
+            button{
+                margin: 20px 0;
+            }
+        </style>
         <script>
             function calculate(){
                 var A, B, x1, x2;
@@ -29,21 +44,6 @@
                 
             }
         </script>
-        <style>
-            input, input:focus {
-                width: 50px;
-                padding: 5px;
-                text-align: right;
-                border: 1px solid grey;
-                outline: none;
-            }
-            input::placeholder {
-                font-size: 1.1em;
-            }
-            button{
-                margin: 20px 0;
-            }
-        </style>
     </head>
     <body>
         <form>

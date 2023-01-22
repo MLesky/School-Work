@@ -1,5 +1,20 @@
 <html>
     <head>
+        <style>
+            input, input:focus {
+                width: 50px;
+                padding: 5px;
+                text-align: right;
+                border: 1px solid grey;
+                outline: none;
+            }
+            input::placeholder {
+                font-size: 1.1em;
+            }
+            button{
+                margin: 20px 0;
+            }
+        </style>
         <script>
             function calculate(){
                 var a, b, c, d, e, f, x, y
@@ -24,7 +39,6 @@
                 c *= d
                 e *= a
                 f *= a
-
                 y = (c - f) / (b - e)
                 x = (c - (b * y)) / (a * d)
                 
@@ -32,21 +46,6 @@
                 "Solution<br>x = " + x + "<br>y = " + y
             }
         </script>
-        <style>
-            input, input:focus {
-                width: 50px;
-                padding: 5px;
-                text-align: right;
-                border: 1px solid grey;
-                outline: none;
-            }
-            input::placeholder {
-                font-size: 1.1em;
-            }
-            button{
-                margin: 20px 0;
-            }
-        </style>
     </head>
     <body>
         <form>

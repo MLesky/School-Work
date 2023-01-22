@@ -3,21 +3,16 @@
     <head>
         <title>Exercise 2 - JavaScript</title>
         <script>
-
-            var i, num;
-            var scores = [];    // array to hold scores
+            var i, num, scores = [];    // array to hold scores
             // associative array (object) to hold grade distribution
             // initial, each grade has a count of 0
             var gradeCount = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0}; 
-            
             num = parseInt(prompt("What number of scores do you want to enter?"))
             // getting the scores
-            for (i = 0; i < num10; i++){
+            for (i = 0; i < num; i++){
                 no = i+1;
-
                 // convert inputted to float
                 scores[i] = parseFloat(prompt("Enter score No " + no));
-
                 if(scores[i] >= 90 && scores[i] <= 100) {
                     // increment the grade count for A grade
                     gradeCount.A++;
@@ -47,12 +42,10 @@
             gradeDistribution("C")
             gradeDistribution("D")
             gradeDistribution("E")
-
             // function to write grade distribution
             function gradeDistribution(grade){
                 document.write(gradeCount[grade] + " students had " + grade + " grade <br/>");
             }
-    
         </script>
     </head>
     <body>

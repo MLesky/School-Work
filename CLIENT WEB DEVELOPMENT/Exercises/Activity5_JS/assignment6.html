@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        var myInfo = {
+            firstname : "Mbah",
+            secondname : "Lesky",
+            matricule : "UBa21PB015",
+            option : "SWE",
+            gender : "Male"
+        }
+
+        function validate() {
+            var isFirstName, isSecondName, isMatricule, isOption, isGender, gender
+            isFirstName = myInfo.firstname.toLowerCase() == fname.value.toLowerCase()
+            isSecondName = myInfo.secondname.toLowerCase() == sname.value.toLowerCase()
+            isMatricule = myInfo.matricule.toLowerCase() == matricule.value.toLowerCase()
+            var genders = document.getElementsByName("gender")
+            for (var i in genders){
+                if(genders[i].checked){
+                    gender = genders[i].value
+                }
+            }
+            isGender = myInfo.gender == gender
+            isOption = myInfo.option.toLowerCase() == option.value.toLowerCase()
+
+            var ans = isFirstName && isSecondName && isMatricule && isOption && isGender && isGender
+
+            result.innerHTML = 
+                '<fieldset><legend>Entered Info</legend>' +
+                    '<p>FirstName: ' + fname.value + '</p>' +
+                    '<p>SecondName: ' + sname.value + '</p>' +
+                    '<p>Matricule: ' + matricule.value + '</p>' +
+                    '<p>Gender: ' + gender + '</p>' +
+                    '<p>Option: ' + option.value + '</p>' +
+                    '<h3 style="color: ' + (ans ? 'green' : 'red') + '">' +
+                        'The info you entered is ' + (ans ? '' : 'not ') + 'a match </h3>'
+                '</fieldset>'
+        }
+
+        function viewInfo(){
+            myinfo.innerHTML = 
+                '<fieldset><legend>Users Info</legend>' +
+                    '<p>FirstName: ' + myInfo.firstname + '</p>' +
+                    '<p>SecondName: ' + myInfo.secondname + '</p>' +
+                    '<p>Matricule: ' + myInfo.matricule + '</p>' +
+                    '<p>Gender: ' + myInfo.gender + '</p>' +
+                    '<p>Option: ' + myInfo.option + '</p>' + '</fieldset>'
+        }
+    </script>
+    <style>
+        td, input, select {
+            padding: 10px
+        }
+        button {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Student Verification</legend>
+            <table>
+                <tr>
+                    <td><label for="fname">Firstname</label></td>
+                    <td><input type="text" id="fname" placeholder="Enter first name..."></td>
+                </tr>
+                <tr>
+                    <td><label for="sname">Secondname</label></td>
+                    <td><input type="text" id="sname" placeholder="Enter second name..."></td>
+                </tr>
+                <tr>
+                    <td><label for="matricule">Matricule</label></td>
+                    <td><input type="text" id="matricule" placeholder="Enter Matricule..."></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td>
+                        <input type="radio" name="gender" value="Male">Male
+                        <input type="radio" name="gender" value="Female">Female
+                        <input type="radio" name="gender" value="Other">Other
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="option">Option</label></td>
+                    <td>
+                        <select id="option">
+                            <option value="none" selected>Select Option</option>
+                            <option value="SWE">Software Engineering</option>
+                            <option value="CNSM">Computer Networks and System Maintenance</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="validate()">Submit</button></td>
+                    <td><button type="reset">Reset</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <div id="result"></div>
+    <div id="myinfo"></div>
+    <button type="button" onclick="viewInfo()">User Info</button>
+</body>
+</html>
