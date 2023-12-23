@@ -14,4 +14,4 @@ School files. CA's, assignments and projects
 ### 07. [Network Management](https://github.com/MLesky/School-Work/tree/main/NETWORK%20MANAGEMENT)
 ### 08. [Object Oriented Programming C++](https://github.com/MLesky/School-Work/tree/main/OBJECT%20ORIENTED%20PROGRAMMING%20C%2B%2B)
 ### 09. [System Modelling, Analysis and Design](https://github.com/MLesky/School-Work/tree/main/SYSTEM%20MODELLING%2C%20ANALYSIS%20AND%20DESIGN)
-### 10. [Web programming[(https://github.com/MLesky/School-Work/tree/year3-semester1/Web%20Programming)
+### 10. [Web programming](https://github.com/MLesky/School-Work/tree/year3-semester1/Web%20Programming)
