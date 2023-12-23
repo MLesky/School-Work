@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Letter To PDF</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h2>LETTER FORM In HTML To PDF</h2>
+      <button class='generate-btn' id="gen-btn">Generate</button>
+    </header>
+
+    <main>
+      <div>
+        <fieldset id="letter-settings">
+          <legend>Settings</legend>
+          <div id="type">
+            <label for="letter-types">Letter Type</label>
+            <div id="letter-types">
+              <button id="formal">Formal Letter</button>
+              <button id="informal">Informal Letter</button>
+            </div>
+          </div>.
+          <div id="logo">
+            <div id="alignment">
+              <label for="alignment">Logo Aligment</label>
+              <div id="alignment-buttons">
+                <button id="left">Left</button>
+                <button id="center">Center</button>
+                <button id="right">Right</button>
+              </div>
+            </div>
+            <div id="size">
+              <label for="logo-size-slider">Logo Size (<span id="logo-size-value"></span>)</label>
+              <input type="range" name="logo-size" id="logo-size-slider" value="80" max="150" min="30" step="5"/>
+            </div>
+          </div>
+          <div class="letter-head">
+            <div id="size">
+              <label for="letter-head-size">Letter Head Size (<span id="letter-head-size-value"></span>)</label>
+              <input type="range" name="letter-head-size" id="letter-head-size-slider" value="40" max="60" min="25" step="5"/>
+            </div>
+            <div id="color">
+              <label for="letter-head-color">Letter Head Color</label>
+              <input type="color" name="letter-head-color" id="letter-head-color-picker" />
+            </div>
+          </div>
+          <div class="letter-text">
+            <div>
+              <label for="subject-size">Subject Size (<span id="subject-size-value"></span>)</label>
+              <input type="range" name="subject-size" id="subject-size-slider" value="24" max="40" min="16" step="4"/>
+            </div>
+            <div>
+              <label for="body-size">Body Size (<span id="body-size-value"></span>)</label>
+              <input type="range" name="body-size" id="body-size-slider" value="16" max="24" min="12" step="2"/>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <section id="letter-form">
+        <div id="letter-header">
+          <label for="logo-picker" id="label-for-logo">
+            <p>Add Logo</p>
+          </label>
+          <input type="file" id="logo-picker" accept="image/*" />
+          <input type="text" placeholder="Letter Head..." id="letter-head" />
+        </div>
+        <div id="letter-sender" class="body">
+          <textarea
+            name="sender-address"
+            id="sender-address"
+            cols="30"
+            rows="2"
+            placeholder=
+"Sender's name
+Sender's address"
+          ></textarea>
+          <input type="date" id="date" placeholder="Date..." />
+        </div>
+        <div id="letter-reciever" class="body">
+          <textarea
+            name="reciever-address"
+            id="reciever-address"
+            cols="30"
+            rows="4"
+            placeholder=
+"To recipient's name
+Recipient's title
+Reciepient's company
+Reciepient's address"
+          ></textarea>
+          <input
+            type="text"
+            name="greetings"
+            id="greeting"
+            placeholder="Greatings..."
+          />
+        </div>
+        <div id="letter-subject">
+          <input type="text" name="subject" id="subject" placeholder="Subject..."/>
+        </div>
+        <div id="letter-body" class="body">
+          <textarea
+            name="body-paragraph"
+            id="body-paragraph"
+            cols="30"
+            rows="10"
+            placeholder="Body..."
+          ></textarea>
+        </div>
+        <div id="letter-closing" class="body">
+          <input type='text' name="complentary-close" id="salutation" placeholder="Salutation">
+          <input type="text" name="signature" id="signature" placeholder="Signature"/>
+        </div>
+      </section>
+    </main>
+
+    <footer></footer>
+    <div id="hider" class="side-btn">
+      <i class="bi bi-x-circle"></i>
+    </div>
+
+    <div id="side-gen-btn" class="side-btn generate-btn">
+      <i class="bi bi-download"></i>
+    </div>
+
+    <div id="print-btn" class="side-btn">
+      <i class="bi bi-printer-fill"></i>
+    </div>
+
+    <div id="fill-btn" class="side-btn">
+      <i class="bi bi-card-text"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
+
+<!-- Informal Letter Format -->
+<!-- 
+    * Address (left)
+    * Date (left)
+    * Greeting right
+    * Paragraphs
+        * Introductory
+        * Body
+        * Conclusion
+    * Signature
+ -->
+
+<!-- Formal Letter Format -->
+<!--
+    * Sender's Address (left)
+    * Date (left)
+    * Reciever's Address (right)
+    * Greeting (right)
+    * Subject (center)
+    * Body of the letter
+    * Complentary close
+    * Signature
+ -->

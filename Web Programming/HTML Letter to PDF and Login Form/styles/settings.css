@@ -1,0 +1,76 @@
+main #letter-settings {
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid gainsboro;
+    transition: ease-out 0.5s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+main #letter-settings>* {
+    margin: 10px 0;
+    border-bottom: 2px solid gainsboro;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+main #letter-settings legend {
+    margin: 0 !important;
+    padding: 0 10px;
+    color: grey;
+    border: 0;
+}
+
+main #letter-settings>div>div, #letter-settings>#type {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+main #letter-settings label::after {
+    padding-right: 10px;
+    content: ': ';
+}
+
+main #letter-settings #left, #formal {
+    background-color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 900px) {
+    main #letter-settings {
+        padding: 5px;
+        border-radius: 7px;
+        border: 2px solid gainsboro;
+        flex-direction: row;
+        justify-content: space-around;
+        overflow: auto;
+    }
+    
+    main #letter-settings>div {
+        padding: 0 10px;
+        /* border: 2px solid rgb(238, 238, 238); */
+        border-bottom: none;
+        border-top: none;
+        padding: 10px 0;
+    }
+    
+    main #letter-settings legend {
+        padding: 10px;
+        color: grey;
+        border: 0;
+    }
+    
+    main #letter-settings>div>div, #letter-settings>#type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    main #letter-settings label {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
